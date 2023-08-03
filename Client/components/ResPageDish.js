@@ -8,8 +8,8 @@ const ResPageDish = ({name, price, desc, image}) => {
     
     const dispatch = useDispatch();
 
-    const handleClick = () => {
-        dispatch(addItem("pizza"))
+    const handleClick = (item) => {
+        dispatch(addItem(item))
     }
 
     return(
@@ -21,10 +21,9 @@ const ResPageDish = ({name, price, desc, image}) => {
                 </div>
                 <div className="dish-img-container">
                     <img src= {DISH_IMG_URL + image} className="dish-img-res"/>
-                    <button className="addBtn" onClick={handleClick}>+ Add</button>
+                    <button className="addBtn" onClick={() => handleClick({name, price, desc, image})}>+ Add</button>
                 </div>
             </div>
-
     )
 }
 
