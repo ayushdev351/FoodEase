@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client"
 import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
+import { Provider } from "react-redux";
 
 import userContext from "./context/userContext";
 import Header from "./components/Header"
@@ -8,19 +9,22 @@ import Contact from "./components/Contact";
 import Cart from "./components/Cart"
 import Help from "./components/Help"
 import Error from "./components/Error";
-
 import Restaurant from "./components/Restaurant";
+
+import appStore from "./store/appStore";
 
 import "./styles.css";
 
 const AppLayout = () => {
     return (
-        <userContext.Provider value = {{userName : "Ayush"}}>
-        <div>   
-            <Header/>
-            <Outlet/>
-        </div>
-        </userContext.Provider>
+        <Provider store = {appStore}>
+            <userContext.Provider value = {{userName : "Ayush"}}>
+                <div>   
+                    <Header/>
+                    <Outlet/>
+                </div>
+            </userContext.Provider> 
+        </Provider>
     )
 }
 
