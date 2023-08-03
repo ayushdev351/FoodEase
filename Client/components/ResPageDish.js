@@ -1,8 +1,16 @@
+import { useDispatch } from "react-redux";
 import { DISH_IMG_URL } from "../utils/constants";
+
+// Importing action
+import { addItem } from "../store/cartSLice";
 
 const ResPageDish = ({name, price, desc, image}) => {
     
-    if(!name) return <p></p>
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(addItem("pizza"))
+    }
 
     return(
             <div className="res-page-dish">
@@ -13,6 +21,7 @@ const ResPageDish = ({name, price, desc, image}) => {
                 </div>
                 <div className="dish-img-container">
                     <img src= {DISH_IMG_URL + image} className="dish-img-res"/>
+                    <button className="addBtn" onClick={handleClick}>+ Add</button>
                 </div>
             </div>
 

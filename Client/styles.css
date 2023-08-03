@@ -300,10 +300,24 @@
 
 .dish-img-container{
     border-radius: 10px;
+    position : relative;
 }
 
 .dish-img-res{
     width: 150px;
     height: 130px;
     border-radius: 10px;
+}
+
+.addBtn{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    position : absolute;
+    width: 50px;
+    cursor: pointer;
+    border : none;
+    right: 120px;
+    top : -10px
 }
