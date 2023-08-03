@@ -5,7 +5,7 @@ import ResPageDish from "./ResPageDish";
 const Cart = () => {
 
     const cartItems = useSelector((store) => store.cart.items);
-    console.log(cartItems);
+    // console.log(cartItems);
 
     const dispatch = useDispatch();
     const handleClick = () => {
@@ -25,7 +25,7 @@ const Cart = () => {
                     }
                 </div>
                 :
-                <h1>Cart is empty. Please add Items</h1>
+                <h4 style = {{"color" : "gray"}}>Cart is empty. Please add Items</h4>
             }
         </div>
     )

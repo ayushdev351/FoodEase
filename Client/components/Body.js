@@ -59,7 +59,7 @@ const Body = () => {
     const fetchData = async() => {
         const data = await fetch(RES_API_URL);
         const jsonData = await data.json();
-        console.log(jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        // console.log(jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setResList(jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilterList(jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }

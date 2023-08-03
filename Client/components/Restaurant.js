@@ -16,7 +16,7 @@ const Restaurant = () => {
     const {name, avgRating, totalRatingsString, locality, cuisines, areaName} = dishData?.data?.cards[0]?.card?.card?.info;
     const catCards = dishData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((cards) => cards?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
 
-    console.log(catCards)
+    // console.log(catCards)
     return(
         <div> 
             <RestaurantPageHead name = {name} rating = {avgRating} ratingCount = {totalRatingsString} area = {locality + ", " + areaName} cuisines = {cuisines.join(", ")}/>

@@ -9,7 +9,7 @@ const Header = () => {
     const {userName} = useContext(userContext);
     // Subscribed to cartSlice
     const cartItems = useSelector((store) => store.cart.items)
-    console.log(cartItems)
+    // console.log(cartItems)
     return(
         <div className="header">
             <img className="logo" src={LOGO_URL} alt="logo"/>
