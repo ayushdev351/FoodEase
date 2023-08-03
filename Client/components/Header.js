@@ -15,11 +15,10 @@ const Header = () => {
             <img className="logo" src={LOGO_URL} alt="logo"/>
             <ul className="nav-items">
                 <li className="nav-item"><NavLink to="/">Home</NavLink></li>
-                <li className="nav-item"><NavLink to="/cart">Cart</NavLink></li>
                 <li className="nav-item"><NavLink to="/help">Help</NavLink></li>
                 <li className="nav-item"><NavLink to="/contact">Contact</NavLink></li>
+                <li className="nav-item nav-cart"><NavLink to="/cart">{cartItems ? cartItems.length : 0} Cart</NavLink></li>
                 <h4 style={{"backgroundColor" : "white", "padding" : "5px", "borderRadius" : "5px"}}>{userName}</h4>
-                <h3>Cart - {cartItems.length}</h3>
             </ul>
         </div>
     )

@@ -48,6 +48,12 @@
     border-bottom-right-radius: 2px;
 }
 
+.nav-cart::first-letter{
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 1px 6px;
+}
+
 /* card */
 
 .res-card, .shimmer-card{
@@ -320,4 +326,29 @@
     border : none;
     right: 120px;
     top : -10px
+}
+
+/* Cart Page */
+
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.clearCartBtn{
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(79, 78, 78);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.cartItems{
+    width: 50%;
 }

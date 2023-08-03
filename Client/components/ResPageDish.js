@@ -6,10 +6,12 @@ import { addItem } from "../store/cartSLice";
 
 const ResPageDish = ({name, price, desc, image}) => {
     
+    if(!name) return <></>
+
     const dispatch = useDispatch();
 
-    const handleClick = (item) => {
-        dispatch(addItem(item))
+    const handleClick = () => {
+        dispatch(addItem({name, price, desc, image}))
     }
 
     return(
@@ -21,7 +23,7 @@ const ResPageDish = ({name, price, desc, image}) => {
                 </div>
                 <div className="dish-img-container">
                     <img src= {DISH_IMG_URL + image} className="dish-img-res"/>
-                    <button className="addBtn" onClick={() => handleClick({name, price, desc, image})}>+ Add</button>
+                    <button className="addBtn" onClick={handleClick}>+ Add</button>
                 </div>
             </div>
     )
