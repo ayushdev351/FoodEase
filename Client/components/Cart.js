@@ -2,8 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearCart } from "../store/cartSLice";
 import ResPageDish from "./ResPageDish";
 
-import { useEffect } from "react";
-
 const Cart = () => {
 
     const cartItems = useSelector((store) => store.cart.items);

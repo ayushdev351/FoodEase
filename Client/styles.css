@@ -43,7 +43,7 @@
 }
 
 .nav-item a.active{
-    border-bottom: solid 2px white;
+    border-bottom: solid 1px white;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
 }
