@@ -4,8 +4,8 @@ import cartReducer from "./cartSLice";
 
 const appStore = configureStore({
     reducer : {
-        cart : cartReducer
-    }
+        cart : cartReducer,
+    },
 })
 
 export default appStore;

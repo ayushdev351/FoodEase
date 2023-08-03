@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client"
 import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
-import { Provider } from "react-redux";
+import {Provider} from "react-redux";
 
 import userContext from "./context/userContext";
 import Header from "./components/Header"
