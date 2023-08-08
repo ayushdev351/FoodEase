@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { DISH_IMG_URL } from "../utils/constants";
 
 // Importing action
-import { addItem } from "../store/cartSLice";
+import { addItem } from "../store/cartSlice";
 
 const ResPageDish = ({name, price, desc, image}) => {
     
