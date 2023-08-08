@@ -5,8 +5,8 @@
   "main": "App.js",
   "scripts": {
     "test": "jest",
-    "start": "parcel App.js",
-    "build": "parcel build App.js"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "author": "Ayush Chauhan",
   "license": "ISC",
